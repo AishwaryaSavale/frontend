@@ -1,0 +1,47 @@
+
+.container{
+    width: 15%;
+    height: 120px;
+    position: fixed;
+    top:35%;
+    left:40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .box{
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.612);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .container .box .circle{
+    margin: 2px;
+    width: 60px;
+    height: 60px;
+    border: 4px solid black;
+    border-radius: 50%;
+    border-top: 4px solid blueviolet;
+    border-bottom: 4px solid orange;
+    transition: all ease-in 0.25s;
+    animation:  rotate linear infinite 0.7s;
+  }
+  .container .box p{
+    font-size: 13px;
+    font-weight: bold;
+  }
+  @keyframes rotate{
+    100%{
+      rotate: 360deg;
+    }
+  }
+
+  
+  
+ 

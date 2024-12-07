@@ -1,0 +1,100 @@
+<div class="container">
+    <i  (click)="goBack()" class="fa-solid fa-circle-left"></i>
+    <h2>Home</h2>
+</div>
+
+<div class="patient">
+<form [formGroup]="userForm" (ngSubmit)="addUser()">
+    <div class="title">
+        <h3>
+            {{isEdit ? "Upadate Patient " : "Add Patient"}}
+        </h3>
+    </div>
+   
+    <div class="input-field">
+        <label>FullName:</label>
+        <input type="text" formControlName="fullName"
+        [ngClass]="{'error' :userForm.controls['fullName'].touched && userForm.controls['fullName'].invalid}"/>
+    </div>
+    <div class="input-field">
+        <label>UserName:</label>
+        <input type="email" formControlName="userName"
+        [ngClass]="{'error' :userForm.controls['userName'].touched && userForm.controls['userName'].invalid}"/>
+    </div>
+    <div class="input-field">
+        <label>Mobile No:</label>
+        <input type="text" formControlName="mobileNo"
+        [ngClass]="{'error' :userForm.controls['mobileNo'].touched && userForm.controls['mobileNo'].invalid}"/>
+    </div>
+    <div class="input-field">
+        <label>BloodGroup</label>
+        <div class="check-container">
+            <div class="child">
+                <input type="radio"  value="a+" [checked]="userForm.controls['bloodGroup'].value=='a+'" formControlName="bloodGroup"
+                [ngClass]="{'error' :userForm.controls['bloodGroup'].touched && userForm.controls['bloodGroup'].invalid}"/>
+                <p >A+</p>
+            </div>
+        </div>
+        <div class="check-container">
+            <div class="child">
+                <input type="radio"  value="a-" [checked]="userForm.controls['bloodGroup'].value=='a-'" formControlName="bloodGroup"
+                [ngClass]="{'error' :userForm.controls['bloodGroup'].touched && userForm.controls['bloodGroup'].invalid}"/>
+                <p>A-</p>
+            </div>
+        </div>
+    </div>
+    <div class="input-field">
+        <label>Date Of Birth:</label>
+        <input type="date" formControlName="dob"
+        [ngClass]="{'error' :userForm.controls['dob'].touched && userForm.controls['dob'].invalid}"/>
+    </div>
+    <button type="submit" [disabled]="userForm.invalid">
+        {{isEdit ? "Upadate Patient" : "Add Patient"}}
+    </button>
+</form>
+</div>
+
+
+<div class="nurse">
+    <form [formGroup]="ntForm" (ngSubmit)="addNt()">
+        <div class="title">
+            <h3>
+                {{isEdit ? "Upadate Nurse" : "Add Nurse"}}
+            </h3>
+        </div>
+       
+        <div class="input-field">
+            <label>FullName:</label>
+            <input type="text" formControlName="fullName"
+            [ngClass]="{'error' :ntForm.controls['fullName'].touched && ntForm.controls['fullName'].invalid}"/>
+        </div>
+        <div class="input-field">
+            <label>Mobile No:</label>
+            <input type="text" formControlName="mobileNo"
+            [ngClass]="{'error' :ntForm.controls['mobileNo'].touched && ntForm.controls['mobileNo'].invalid}"/>
+        </div>
+        <div class="input-field">
+            <label>Gender</label>
+            <div class="check-container">
+                <div class="child">
+                    <input type="radio"  value="Male" [checked]="ntForm.controls['gender'].value=='Male+'" formControlName="gender"
+                    [ngClass]="{'error' :ntForm.controls['gender'].touched && ntForm.controls['gender'].invalid}"/>
+                    <p >Male</p>
+                </div>
+            </div>
+            <div class="check-container">
+                <div class="child">
+                    <input type="radio"  value="Female" [checked]="ntForm.controls['gender'].value=='Female'" formControlName="gender"
+                    [ngClass]="{'error' :ntForm.controls['gender'].touched && ntForm.controls['gender'].invalid}"/>
+                    <p>Female</p>
+                </div>
+            </div>
+        </div>
+        <button type="submit" [disabled]="ntForm.invalid">
+            {{isEdit ? "Upadate Nurse" : "Add Nurse"}}
+        </button>
+    </form>
+</div>
+
+
+<app-loader *ngIf="loading"></app-loader>

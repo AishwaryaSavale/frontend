@@ -1,0 +1,236 @@
+.container{
+    width: 100%;
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 2%;
+    gap: 30px;
+}
+.container i{
+    font-size: 26px;
+    font: bold;
+    color: blueviolet;
+}
+.container h2{
+    font-size: 26px;
+    font: bold;
+    color: blueviolet;
+}
+.patient form{
+    position: fixed;
+    top: 15%;
+    right:10%;
+    width: 500px;
+    padding: 10px 20px;
+    background: whitesmoke;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgba(137, 43, 226, 0.544);
+}
+.patient form .title {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: blueviolet;
+}
+.patient form .input-field{
+    width: 100%;
+    padding: 10px;
+    display: grid;
+}
+.patient form .input-field label{
+    font-size: 16px;
+    font-weight: bold; 
+}
+.patient form .input-field input[type="number"],
+.patient form .input-field input[type="text"],
+.patient form .input-field input[type="email"],
+.patient form .input-field input[type="date"]{
+    width: 100%;
+    margin-top:5px;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    outline: none;
+    transition: all ease-in 0.25s;
+    border: 2px solid rgba(224, 202, 202, 0.833);
+}
+.patient .input-field .error{
+    width: 100%;
+    margin-top:5px;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    font-weight: bold !important;
+    color:black !important;
+    transition: all ease-in 0.25s;
+    border: 2px solid red !important;
+}
+.patient form .input-field input:read-only{
+    background-color: rgba(197, 147, 244, 0.792);
+    border: 2px solid blueviolet;
+    color: black;
+    font-weight: bold;
+}
+.patient .input-field:focus-within input{
+    border: 2px solid blueviolet ;
+}
+.patient .input-field:focus-within input{
+    color: blueviolet ;
+}
+.patient .input-field .check-container{
+    width: 100%;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.patient .input-field .check-container .child{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+.patient .check-container .child input{
+    padding: 6px;
+}
+.patient .check-container .child p{
+    font-size: 14px;
+    font-weight: bold;
+}
+.patient form button{
+    margin: 15px 0;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    background: blueviolet;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+}
+.patient form button:disabled{
+    background: rgba(177, 116, 235, 0.526);
+    border: 2px solid blueviolet;
+    cursor: no-drop;
+   
+}
+/*nurse*/
+.nurse form{
+    position: absolute;
+    top: 20%;
+    left:10%;
+    width: 500px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    background: whitesmoke;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px rgb(89, 89, 222);
+}
+.nurse form .title {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: blue;
+}
+.nurse form .input-field{
+    width: 100%;
+    padding: 10px;
+    display: grid;
+}
+.nurse form .input-field label{
+    font-size: 16px;
+    font-weight: bold; 
+}
+.nurse form .input-field input[type="number"],
+.nurse form .input-field input[type="text"]
+{
+    width: 100%;
+    margin-top:5px;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    outline: none;
+    transition: all ease-in 0.25s;
+    border: 2px solid rgba(224, 202, 202, 0.833);
+}
+.nurse .input-field .error{
+    width: 100%;
+    margin-top:5px;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    font-weight: bold !important;
+    color: black !important;
+    transition: all ease-in 0.25s;
+    border: 2px solid red !important;
+}
+.nurse form .input-field input:read-only{
+    background-color: rgba(55, 55, 248, 0.455);
+    border: 2px solid blue;
+    color: black;
+    font-weight: bold;
+}
+.nurse .input-field:focus-within input{
+    border: 2px solid blue ;
+}
+.nurse .input-field:focus-within input{
+    color: blue;
+}
+.nurse .input-field .check-container{
+    width: 100%;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.nurse .input-field .check-container .child{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+}
+.nurse .check-container .child input{
+    padding: 6px;
+}
+.nurse .check-container .child p{
+    font-size: 14px;
+    font-weight: bold;
+}
+.nurse form button{
+    margin: 15px 0;
+    padding: 10px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 16px;
+    background: blue;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+}
+.nurse form button:disabled{
+    background: rgba(90, 90, 207, 0.812);
+    border: 2px solid blue;
+    cursor: no-drop;
+   
+}
+
+
+
+
+
+
+
+
+
+

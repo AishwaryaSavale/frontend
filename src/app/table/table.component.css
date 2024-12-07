@@ -1,0 +1,125 @@
+.container{
+    width: 100%;
+    height:80px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 2%;
+    gap: 30px;
+}
+.container i{
+    font-size: 26px;
+    font: bold;
+    color: blueviolet;
+}
+.container h2{
+    font-size: 26px;
+    font: bold;
+    color: blueviolet;
+}
+
+.patient{
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    width: 50%;
+}
+.patient table{
+    width: 100%;
+    overflow: hidden;
+    border-collapse:collapse;
+    border-radius: 4px;
+}
+.patient table thead{
+    background-color: blueviolet;
+}
+.patient thead th{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+.patient tbody tr{
+    border-bottom: 2px solid blueviolet
+}
+.patient tbody td{
+    padding: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+.patient tbody .action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.patient .action i{
+    font-size: 15px;
+    transition: all ease-in 0.25s;
+    cursor: pointer;
+}
+.patient .action i:first-child{
+    color: green;
+}
+.patient .action i:last-child{
+    color: red;
+}
+.patient .action i:first-child:active{
+    color: rgb(169, 241, 169);
+}
+.patient .action i:last-child:active{
+    color: rgb(234, 116, 116);
+}
+
+
+.nurse {
+    position: absolute;
+    top: 10%;
+    left: 10px;
+    width: 40%;
+}
+.nurse  table{
+    width: 100%;
+    overflow: hidden;
+    border-collapse:collapse;
+    border-radius: 4px;
+}
+.nurse  table thead{
+    background-color: blue;
+}
+.nurse  thead th{
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.nurse  tbody tr{
+    border-bottom: 2px solid  blue;
+}
+.nurse  tbody td{
+    padding: 6px;
+    font-size: 14px;
+    text-align: center;
+}
+.nurse tbody .action{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.nurse  .action i{
+    font-size: 15px;
+    transition: all ease-in 0.25s;
+    cursor: pointer;
+}
+.nurse  .action i:first-child{
+    color: green;
+}
+.nurse  .action i:last-child{
+    color: red;
+}
+.nurse  .action i:first-child:active{
+    color: rgb(169, 241, 169);
+}
+.nurse .action i:last-child:active{
+    color: rgb(234, 116, 116);
+}

@@ -1,0 +1,66 @@
+<div class="container">
+    <i  (click)="goBack()" class="fa-solid fa-circle-left"></i>
+    <h2>Home</h2>
+</div>
+
+<div class="patient">
+<table> 
+    <thead> 
+        <tr>
+            <th>#</th>
+            <th>FullName</th>
+            <th>UserName</th>
+            <th>Mobile No</th>
+            <th>BloodGroup</th>
+            <th>Date Of Birth</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{user.fullName}}</td>
+            <td>{{user.userName}}</td>
+            <td>{{user.mobileNo}}</td>
+            <td>{{user.bloodGroup}}</td>
+            <td>{{user.dob}}</td>
+            <td class="action">
+                <i (click)="editUser(user._id)" title="Edit User" class="fa-solid fa-user-pen" ></i>
+                <i  (click)="deleteUser(user._id)" title="Delete User" class="fa-solid fa-trash" ></i>
+            </td>
+        </tr> 
+    </tbody>
+</table>
+</div>
+
+<div class="nurse">
+    <table> 
+        <thead> 
+            <tr>
+                <th>#</th>
+                <th>FullName</th>
+                <th>Mobile No</th>
+                <th>Gender</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let nt of ntusers;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{nt.fullName}}</td>
+                <td>{{nt.mobileNo}}</td>
+                <td>{{nt.gender}}</td>
+                <td class="action">
+                    <i (click)="editNt(nt._id)" title="Edit User" class="fa-solid fa-user-pen" ></i>
+                    <i  (click)="deleteNt(nt._id)" title="Delete User" class="fa-solid fa-trash" ></i>
+                </td>
+            </tr> 
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<app-loader  *ngIf="loading" ></app-loader>
+

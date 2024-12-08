@@ -11,13 +11,12 @@ import { ApiService } from '../services/api.service';
 export class LoaderComponent implements OnInit{
 
   loadingAction=" "
-  loadingAction2=""
+  
 
   constructor(private service:ApiService){}
 
   ngOnInit():void{
    this.loadingAction=this.service.getLoadingAction()
-   this.loadingAction2=this.service.getLoadingAction2()
   }
 
 }

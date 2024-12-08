@@ -9,27 +9,9 @@
     background-color: blueviolet;
 }
 .container h2{
-    font-size: 28px;
+    font-size: 30px;
     font-weight: bold;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.sidebar button{
-    padding: 10px 15px;
-    font-weight: bold;
-    font-size: 16px;
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    border-radius: 4px;
-    margin: 0 auto;
-}
-.sidebar button:hover{
-    background: white;
-    border: 2px solid blue;
-    color: blueviolet;
 }
 .sidebar{
     width: 15%;
@@ -45,22 +27,21 @@
     background-color: #892be274;
     box-shadow: 1px 1px 10px #892be274;
 }
-.home{
-    position: absolute;
-    top: 10vh;
-    left:15%;
-    width:85%;
-    height: 100vh;
+.sidebar button{
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border-radius: 4px;
+    margin: 0 auto;
 }
-.home h1{
-    margin-top: 20%;
-    padding: 50px;
-    text-align: center;
+.sidebar button:hover{
+    background: white;
+    border: 2px solid blue;
     color: blueviolet;
-    font-size: 50px;
-    font-family:'Lilita One';   
 }
-.home h1:hover{
-    color: blue;
-    font-family:Arial, Helvetica, sans-serif;   
-}
+

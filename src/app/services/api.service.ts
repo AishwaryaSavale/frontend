@@ -23,23 +23,23 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   getAllUsers():Observable<any>{
-    return this.http.get('http://localhost:3333/api/getUser')
+    return this.http.get('https://day2-backend.vercel.app/api/getUser')
   }
 
   addUser(userForm:any):Observable<any>{
-    return this.http.post('http://localhost:3333/api/addUser',userForm)
+    return this.http.post('https://day2-backend.vercel.app/api/addUser',userForm)
   }
 
   getUserDetail(id:any):Observable<any>{
-    return this.http.get(`http://localhost:3333/api/getUserId/${id}`)
+    return this.http.get(`https://day2-backend.vercel.app/api/getUserId/${id}`)
   }
    
   updateUser(id:any,userForm:any):Observable<any>{
-    return this.http.put(`http://localhost:3333/api/updateUser/${id}`,userForm)
+    return this.http.put(`https://day2-backend.vercel.app/api/updateUser/${id}`,userForm)
   }
 
   deleteUser(id:any):Observable<any>{
-    return this.http.delete(`http://localhost:3333/api/deleteUser/${id}`)
+    return this.http.delete(`https://day2-backend.vercel.app/api/deleteUser/${id}`)
   }
 
 
@@ -47,23 +47,23 @@ export class ApiService {
 
 
   getAllNt():Observable<any>{
-    return this.http.get('http://localhost:3333/getnt')
+    return this.http.get('https://day2-backend.vercel.app/getnt')
   }
 
   addNt(ntForm:any):Observable<any>{
-    return this.http.post('http://localhost:3333/addnt',ntForm)
+    return this.http.post('https://day2-backend.vercel.app/addnt',ntForm)
   }
 
   getNtDetail(id:any):Observable<any>{
-    return this.http.get(`http://localhost:3333/getntId/${id}`)
+    return this.http.get(`https://day2-backend.vercel.app/getntId/${id}`)
   }
    
   updateNt(id:any,ntForm:any):Observable<any>{
-    return this.http.put(`http://localhost:3333/updatent/${id}`,ntForm)
+    return this.http.put(`https://day2-backend.vercel.app/updatent/${id}`,ntForm)
   }
 
   deleteNt(id:any):Observable<any>{
-    return this.http.delete(`http://localhost:3333/deletent/${id}`)
+    return this.http.delete(`https://day2-backend.vercel.app/deletent/${id}`)
   }
 
 }
